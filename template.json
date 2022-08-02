@@ -1,0 +1,77 @@
+{
+  "digest": "64c178b6ef1c59b526e47ec875d88b55c37f738eee3dda1d0c28a31cc40a1ab0",
+  "id": "3bafda67-4952-4e9e-929a-1f727f962042",
+  "lastModifiedBy": "user2",
+  "metadata": {
+    "description": "A pipeline template derived from pipeline \"verification\" in application \"luthanapp\"",
+    "name": "ordinary-catfish-62",
+    "owner": "luthan@opsmx.io",
+    "scopes": [
+      "global"
+    ]
+  },
+  "pipeline": {
+    "keepWaitingPipelines": false,
+    "lastModifiedBy": "user2",
+    "limitConcurrent": true,
+    "spelEvaluator": "v4",
+    "stages": [
+      {
+        "applicationId": "7",
+        "name": "Verification",
+        "parameters": {
+          "baselineRealTime": true,
+          "canaryRealTime": true,
+          "canaryresultscore": "80",
+          "customEnvironment": "qa",
+          "environment": [
+            {
+              "id": 0,
+              "spinnakerEnvironment": "Add new Environment"
+            }
+          ],
+          "gateSecurity": [
+            {
+              "connectorType": "PayloadConstraints",
+              "helpText": "Payload Constraints for Gate Security",
+              "isMultiSupported": true,
+              "label": "Payload Constraints",
+              "selectInput": false,
+              "supportedParams": [
+                {
+                  "helpText": "Key",
+                  "label": "Key",
+                  "name": "label",
+                  "type": "string"
+                },
+                {
+                  "helpText": "Value",
+                  "label": "Value",
+                  "name": "value",
+                  "type": "string"
+                }
+              ],
+              "values": []
+            }
+          ],
+          "imageids": "nginx1236",
+          "lifetime": "0.05",
+          "logTemplate": "elastic",
+          "minicanaryresult": "60"
+        },
+        "pipelineId": 48,
+        "refId": "1",
+        "requisiteStageRefIds": [],
+        "serviceId": 48,
+        "type": "verification"
+      }
+    ],
+    "triggers": [],
+    "updateTs": "1654619006000"
+  },
+  "protect": false,
+  "schema": "v2",
+  "tag": "latest",
+  "updateTs": "1659415311000",
+  "variables": []
+}
